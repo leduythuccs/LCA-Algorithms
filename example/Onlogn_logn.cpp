@@ -10,7 +10,7 @@
     #include <math.h> 
 #endif
 #include "../header/edge.h"
-#include "../header/Onlogn_Ologn.h"
+#include "../LCA/Onlogn_Ologn.h"
 
 int main() {
     int n, root;

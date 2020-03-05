@@ -10,7 +10,7 @@
     #include <math.h> 
 #endif
 #include "../header/edge.h"
-#include "../header/On_O1.h"
+#include "../LCA/On_O1.h"
 
 int main() {
     int n, root;

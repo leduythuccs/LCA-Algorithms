@@ -11,9 +11,9 @@
     #include <math.h> 
 #endif
 #include "header/edge.h"
-#include "header/Onlogn_Ologn.h"
-#include "header/Onlogn_O1.h"
-#include "header/On_O1.h"
+#include "LCA/Onlogn_Ologn.h"
+#include "LCA/Onlogn_O1.h"
+#include "LCA/On_O1.h"
 template<class T>
 void get_time(
     const std::vector<Edge> &edges, 

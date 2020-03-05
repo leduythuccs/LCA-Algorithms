@@ -4,6 +4,6 @@
 ## Requirements: 
 - g++ (--std=c++17)
 ## How to use:
-If you just want to use the code for competitive programming or stuff, download the header file you need and the [edge.h](header/edge.h) file. See [Example](example/) for example cpp files.
+If you just want to use the code for competitive programming or stuff, download the header file you need in [LCA](LCA/) and the [edge.h](header/edge.h) file. See [Example](example/) for example cpp files.
 
 ## Todo: benchmarking
