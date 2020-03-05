@@ -1,5 +1,5 @@
 # LCA_Algorithms
- Implementation & benchmarking of some algorithms which find Lowest Common Ancestor of 2 nodes on a tree.
+ Implementation & benchmarking of some LCA (Lowest Common Ancestor) algorithms.
 
 ## Requirements: 
 - g++ (--std=c++17)
