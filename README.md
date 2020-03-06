@@ -1,4 +1,4 @@
-# LCA_Algorithms
+# LCA Algorithms
  Implementation & speed test of some LCA (Lowest Common Ancestor) algorithms.
 
 ## Algorithms
@@ -46,4 +46,4 @@ Example: `generator.exe random 10 10` will generate a random tree with 10 nodes 
 To add test(s) by the generator to the speed test, add its parameters to [test_parrams](generator/test_params.txt) file
 
 ## Note
-it could cause stack-overflow if tree is deep, please inscrease stacksize if you are testing with large tests. With degenerate tree (line) has 10^6 node, consider to inscrease stacksize upto 60MB.
+It could cause stack-overflow if tree is deep, please inscrease stacksize if you are testing with large tests. With degenerate tree (line) has 10^6 node, consider to inscrease stacksize upto 128 MB.
