@@ -63,7 +63,7 @@ struct LCA_n_1 {
                 min_by_level(big_rmq[0][id_block], i) == i)
                 big_rmq[0][id_block] = i;
             //calc mask
-            if (pointer > 0 && min_by_level(i - 1, i))
+            if (pointer > 0 && min_by_level(i - 1, i) == i - 1)
                 masks[id_block] |= 1 << (pointer - 1);
         }
         //build sparse table 
