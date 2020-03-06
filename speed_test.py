@@ -2,14 +2,17 @@ import os
 from os import path
 import json
 
-generator_code_path = path.join("gen", "gen_test.cpp")
-generator_path = path.join("gen", "gen_test.exe")
+generator_code_path = path.join("generator", "generator.cpp")
+generator_path = path.join("generator", "generator.exe")
 
 def gen_test(params):
     params = params.strip()
     if params.count(' ') < 2:
         return 0
     file_name = path.join("tests", params.replace(' ', '_') + '.txt')
+    if path.exists(file_name):
+        return 0
+        
     print("generating " + file_name, end=": ")
 
     if (os.system(generator_path + " " + params + " > " + file_name) != 0):
@@ -22,7 +25,7 @@ def gen_tests():
     if os.system("g++ -O2 -std=c++17 -o " + generator_path + " " + generator_code_path) != 0:
         print("Cannot compile generator " + generator_code_path)
         return []
-    test_params = open(path.join("gen", "test_params.txt"), 'r').readlines()
+    test_params = open(path.join("generator", "test_params.txt"), 'r').readlines()
     tests = []
     for params in test_params:
         test = gen_test(params)
@@ -33,8 +36,7 @@ def gen_tests():
 def get_tests_list():
     tests = list(filter(lambda x: x.find('.txt') != -1, os.listdir('tests')))
     tests = list(map(lambda x: x[:-4], tests))
-    if len(tests) == 0:
-        tests = gen_tests()
+    tests += gen_tests()
     return tests
 
 def run(test):
@@ -51,7 +53,7 @@ def run(test):
         rows += "\n"
         with open("result.csv", "a") as result: result.write(rows)
     else:
-        print("error")
+        print(test + ": error")
 
 def speed_test():
     tests = get_tests_list()
