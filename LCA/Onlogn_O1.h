@@ -54,7 +54,7 @@ struct LCA_nlogn_1 {
     int LCA(int l, int r) {
         if (l == r) return l;
         std::tie(l, r) = std::minmax(time_in[l], time_in[r]);
-        int k = log2(r - l + 1);
-        return min_by_time(rmq[k][l], rmq[k][r - (1 << k) + 1]);
+        int k = log2(r - l);
+        return min_by_time(rmq[k][l], rmq[k][r - (1 << k)]);
     }
 };

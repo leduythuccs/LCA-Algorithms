@@ -31,7 +31,7 @@ void get_time(
     for (int i = 0; i < q; ++i) {
         int lca = tree.LCA(l[i], r[i]);
         if (lca != ans[i])  {
-            std::cerr << typeid(T).name() << ": failed at " << i << "th query.\nExpected: " << ans[i]
+            std::cerr << typeid(T).name() << ": failed at " << i + 1 << "th query.\nExpected: " << ans[i]
             << "\nOutput: " << lca << '\n';
             exit(i + 1);
         }
