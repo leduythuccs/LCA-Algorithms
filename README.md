@@ -15,10 +15,11 @@ If you just want to use the code for competitive programming or stuff, download 
 
 See [Example](example/) for example cpp files.
 
-For doing the speed test: 
-    - Clone this repo
-    - Just simply run speed_test.py by `python speed_test.py` (or `python3`) and wait, check the result in `resuilt.csv` file (you can open it with Excel)
-    - If you wanna add your own test set, please see the [Test format](#test-format) section below. I also code a test generator [here](generator/), see guide in [Test generator](#test-generator)
+For doing the speed test:
+- Clone this repo
+- Just simply run speed_test.py by `python speed_test.py` (or `python3`) and wait, check the result in `resuilt.csv` file (you can open it with Excel)
+- If you wanna add your own test set, please see the [Test format](#test-format) section below. I also code a test generator [here](generator/), see guide in [Test generator](#test-generator)
+
 ## Speed test
 I run a speed test with my random test set (see [Test](tests/)). Check the result in [result.csv](result.csv)
 ## Test format
