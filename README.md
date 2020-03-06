@@ -6,6 +6,7 @@ Implemented alogrithm list:
 - [Simple sparse table](LCA/Onlogn_Ologn). 
 - [Covert to RMQ for constant query time](LCA/Onlogn_O1)
 - [Farach-Colton and Bender Algorithm, O(n) initiation time](LCA/On_O1)
+
 ## Requirements: 
 - g++ (--std=c++17) 
 - python3 (if you want to do the speed test yourself)
@@ -43,6 +44,6 @@ Then run the excutable file in command line with these paramaters: `generator.ex
 Example: `generator.exe random 10 10` will generate a random tree with 10 nodes and have 10 LCA queries
 
 To add test(s) by the generator to the speed test, add its parameters to [test_parrams](generator/test_params.txt) file
-## To do
-- Run the test with bigger test
-- Test in ubuntu 
+
+## Note
+it could cause stack-overflow if tree is deep, please inscrease stacksize if you are testing with large tests. With degenerate tree (line) has 10^6 node, consider to inscrease stacksize upto 60MB.
