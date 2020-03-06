@@ -1,0 +1,10 @@
+line 10 10
+line 100 100
+line 1000 1000
+line 10000 10000 
+line 100000 100000
+random 10 10
+random 100 100
+random 1000 1000
+random 10000 10000 
+random 100000 100000

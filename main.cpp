@@ -25,8 +25,10 @@ void get_time(
 
     auto start_time = std::chrono::steady_clock::now();
     T tree(edges, root);
+    std::cout << "\t\"" << typeid(T).name() << "\": {" << "\n";
     auto current_time = std::chrono::steady_clock::now();
-    std::cout << std::chrono::duration<double, std::milli>(current_time - start_time).count() << ' ';
+    std::cout << "\t\t\"init\": ";
+    std::cout << std::chrono::duration<double, std::milli>(current_time - start_time).count() << ", \n";
     start_time =  std::chrono::steady_clock::now();
     for (int i = 0; i < q; ++i) {
         int lca = tree.LCA(l[i], r[i]);
@@ -37,7 +39,9 @@ void get_time(
         }
     }
     current_time = std::chrono::steady_clock::now(); 
-    std::cout << std::chrono::duration<double, std::milli>(current_time - start_time).count() << ' ';
+    std::cout << "\t\t\"query\": ";
+    std::cout << std::chrono::duration<double, std::milli>(current_time - start_time).count();
+    std::cout << "\n\t}";
 }
 int main() {
     //for faster cin cout, please don't use printf scanf
@@ -57,8 +61,12 @@ int main() {
     for (int i = 0; i < q; ++i) {
         std::cin >> l[i] >> r[i] >> ans[i];
     }
+    std::cout << "{\n";
     get_time<LCA_nlogn_logn>(edges, root, q, l, r, ans);
+    std::cout << ",\n";
     get_time<LCA_nlogn_1>(edges, root, q, l, r, ans);
+    std::cout << ",\n";
     get_time<LCA_n_1>(edges, root, q, l, r, ans);
+    std::cout << "\n}";
     return 0;
 }
