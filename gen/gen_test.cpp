@@ -36,6 +36,7 @@ int main(int argc, char* argv[])
             edges.push_back({perm[parent[i]], perm[i]});
     }
     //for faster cin cout, please don't use printf scanf
+    std::ios_base::sync_with_stdio(false); std::cin.tie(NULL);
     std::cout << n << ' ' << root << '\n';
     for (auto [u, v] : edges)
         std::cout << u << ' ' << v << '\n';
