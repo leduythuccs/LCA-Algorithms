@@ -41,7 +41,7 @@ def get_tests_list():
 
 def run(test):
     test_path = path.join("tests", test + ".txt")
-    id = os.system(".\\main.exe < " + test_path + " > run.json 2> run.err")
+    id = os.system("main.exe < " + test_path + " > run.json 2> run.err")
     if id == 0:
         rows = test
         with open("run.json", "r") as json_file:
