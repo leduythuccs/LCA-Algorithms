@@ -47,8 +47,8 @@ def run(test):
         with open("run.json", "r") as json_file:
             data = json.load(json_file)
             for algo in data:
-                rows += "," + str(data[algo]["init"])
-                rows += "," + str(data[algo]["query"])
+                rows += "," + str(data[algo]["init"]) + "ms"
+                rows += "," + str(data[algo]["query"]) + "ms"
                 
         rows += "\n"
         with open("result.csv", "a") as result: result.write(rows)
