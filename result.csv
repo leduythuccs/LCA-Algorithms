@@ -1,4 +1,5 @@
-File test\Algorithm,14LCA_nlogn_logn: initation time,14LCA_nlogn_logn: answer query time,11LCA_nlogn_1: initation time,$random_100_100,0.020399ms,0.005035ms,0.022444ms,0.001151ms,0.020134ms,0.002037ms
+File test\Algorithm,14LCA_nlogn_logn: initation time,14LCA_nlogn_logn: answer query time,11LCA_nlogn_1: initation time,11LCA_nlogn_1: answer query time,7LCA_n_1: initation time,7LCA_n_1: answer query time
+random_100_100,0.020399ms,0.005035ms,0.022444ms,0.001151ms,0.020134ms,0.002037ms
 line_10_10,0.004793ms,0.000518ms,0.003738ms,0.00024ms,0.005434ms,0.000428ms
 line_100000_100000,59.1874ms,74.2844ms,45.7501ms,3.03597ms,40.5558ms,9.45699ms
 line_100_100,0.030238ms,0.005177ms,0.019938ms,0.001008ms,0.021374ms,0.003626ms
