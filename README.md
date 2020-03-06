@@ -11,7 +11,10 @@ Implemented alogrithm list:
 - python3 (if you want to do the speed test yourself)
 
 ## How to use:
-If you just want to use the code for competitive programming or stuff, download the header file you need in [LCA](LCA/) and the [edge.h](header/edge.h) file. See [Example](example/) for example cpp files.
+If you just want to use the code for competitive programming or stuff, download the header file you need in [LCA](LCA/) and the [edge.h](header/edge.h) file. 
+
+See [Example](example/) for example cpp files.
+
 For doing the speed test: 
     - Clone this repo
     - Just simply run speed_test.py by `python speed_test.py` (or `python3`) and wait, check the result in `resuilt.csv` file (you can open it with Excel)
@@ -28,7 +31,7 @@ If you want to use you onw test set, please format those test as follow:
 Save it as a `txt` file and move it to `tests` folder.
 
 ## Test generator
-First, compile the [generator.cpp](generator/generator.cpp) to an executable file with g++ (emxample: `g++ -O2 -std=c++17 -o generator/generator.cpp + generator.exe`)
+First, compile the [generator.cpp](generator/generator.cpp) to an executable file with g++ (emxample: `g++ -O2 -std=c++17 -o generator/generator.cpp generator.exe`)
 
 Then run the excutable file in command line with these paramaters: `generator.exe t n q`
 - "t" is type of tree you wanna generate, currently it only accept "line" and "random" tree.
