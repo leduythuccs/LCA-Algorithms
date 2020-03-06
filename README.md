@@ -21,7 +21,8 @@ For doing the speed test:
 - If you wanna add your own test set, please see the [Test format](#test-format) section below. I also code a test generator [here](generator/), see guide in [Test generator](#test-generator)
 
 ## Speed test
-I run a speed test with my random test set (see [Test](tests/)). Check the result in [result.csv](result.csv)
+I run a speed test with my random test set. Check the result in [result.csv](result.csv)
+
 ## Test format
 If you want to use you onw test set, please format those test as follow:
 - First line: n (number node of the tree), r (index of root node)

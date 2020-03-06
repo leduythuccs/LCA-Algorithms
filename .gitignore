@@ -1,5 +1,4 @@
 *.exe
-tests/
 *.out
 *.err
 *.json
