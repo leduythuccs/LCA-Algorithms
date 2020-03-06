@@ -105,7 +105,7 @@ struct LCA_n_1 {
         int left_block = l / block_size;
         int right_block = r / block_size;
         if (left_block == right_block)
-            return euler_tour[small_rmq[masks[left_block]][l % block_size][r % block_size]];
+            return euler_tour[small_rmq_query(left_block, l % block_size, r % block_size)];
         int lca = min_by_level(
             small_rmq_query(left_block, l % block_size, block_size - 1),
             small_rmq_query(right_block, 0, r % block_size)
