@@ -43,6 +43,7 @@ def get_tests_list():
     return tests
 
 def run(test):
+    print("Testing", test)
     test_path = path.join("tests", test + ".txt")
     id = os.system(command_prefix + "main.exe < " + test_path + " > run.json 2> run.err")
     if id == 0:
@@ -58,8 +59,18 @@ def run(test):
     else:
         print(test + ": error")
 
+def get_nodes(test):
+    if test.count('_') != 2:
+        return 0
+    test = test[test.find('_') + 1 :]
+    test = test[:test.find('_')]
+    if test.isdigit():
+        return int(test)
+    return 0
+
 def speed_test():
     tests = get_tests_list()
+    tests = sorted(tests, key = get_nodes)
     if os.system("g++ -O2 -std=c++17 -o main.exe main.cpp") != 0:
         print("Cannot compile main.cpp")
         return
