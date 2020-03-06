@@ -4,6 +4,9 @@ import json
 
 generator_code_path = path.join("generator", "generator.cpp")
 generator_path = path.join("generator", "generator.exe")
+command_prefix = ""
+if os.name == "posix": #linux
+    command_prefix = "./" 
 
 def gen_test(params):
     params = params.strip()
@@ -15,7 +18,7 @@ def gen_test(params):
         
     print("generating " + file_name, end=": ")
 
-    if (os.system(generator_path + " " + params + " > " + file_name) != 0):
+    if (os.system(command_prefix + generator_path + " " + params + " > " + file_name) != 0):
         print("failed")
         return 0
     print("succeed")
@@ -41,7 +44,7 @@ def get_tests_list():
 
 def run(test):
     test_path = path.join("tests", test + ".txt")
-    id = os.system("main.exe < " + test_path + " > run.json 2> run.err")
+    id = os.system(command_prefix + "main.exe < " + test_path + " > run.json 2> run.err")
     if id == 0:
         rows = test
         with open("run.json", "r") as json_file:
