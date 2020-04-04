@@ -3,9 +3,9 @@
 
 ## Algorithms
 Implemented alogrithm list:
-- [Simple sparse table](LCA/Onlogn_Ologn). 
-- [Covert to RMQ for constant query time](LCA/Onlogn_O1)
-- [Farach-Colton and Bender Algorithm, O(n) initiation time](LCA/On_O1)
+- [Simple sparse table](LCA/Onlogn_Ologn.h). 
+- [Covert to RMQ for constant query time](LCA/Onlogn_O1.h)
+- [Farach-Colton and Bender Algorithm, O(n) initiation time](LCA/On_O1.h)
 
 ## Requirements: 
 - g++ (--std=c++17) 
